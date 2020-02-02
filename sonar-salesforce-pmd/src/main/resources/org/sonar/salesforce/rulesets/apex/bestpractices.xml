@@ -8,7 +8,7 @@
     <description>
 Rules which enforce generally accepted best practices.
     </description>
-
+ 
     <rule name="ApexUnitTestClassShouldHaveAsserts"
           since="5.5.1"
           message="Apex unit tests should System.assert() or assertEquals() or assertNotEquals()"
@@ -29,6 +29,32 @@ public class Foo {
    // System.assertNotEquals(a, null, 'account not found');
    a.toString();
    }
+}
+]]>
+        </example>
+    </rule>
+
+    <rule name="ApexAssertionsShouldIncludeMessage"
+          since="6.13.0"
+          message="The second parameter of System.assert/third parameter of System.assertEquals/System.assertNotEquals is a message."
+          class="net.sourceforge.pmd.lang.apex.rule.bestpractices.ApexAssertionsShouldIncludeMessageRule"
+          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_bestpractices.html#apexassertionsshouldincludemessage">
+        <description>
+The second parameter of System.assert/third parameter of System.assertEquals/System.assertNotEquals is a message. 
+Having a second/third parameter provides more information and makes it easier to debug the test failure and improves the readability of test output.
+        </description>
+        <priority>3</priority>
+        <example>
+<![CDATA[
+@isTest
+public class Foo {
+     @isTest
+    static void methodATest() {
+        System.assertNotEquals('123', o.StageName); // not good
+        System.assertEquals('123', o.StageName, 'Opportunity stageName is wrong.'); // good
+        System.assert(o.isClosed); // not good
+        System.assert(o.isClosed, 'Opportunity is not closed.'); // good
+    }
 }
 ]]>
         </example>
