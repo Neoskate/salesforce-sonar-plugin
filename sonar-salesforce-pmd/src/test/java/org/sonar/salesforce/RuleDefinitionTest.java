@@ -53,7 +53,7 @@ public class RuleDefinitionTest {
 
 
 
-    assertThat(rules.size()).isEqualTo(45);
+    assertThat(rules.size()).isEqualTo(46);
   }
 
 }

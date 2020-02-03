@@ -183,4 +183,30 @@ while (true) {  // preferred approach
         </example>
     </rule>
 
+    <rule name="FieldNamingConventions"
+          since="6.15.0"
+          message="The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum."
+          class="net.sourceforge.pmd.lang.apex.rule.bestpractices.FieldNamingConventions"
+          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_bestpractices.html#fieldnamingconventions">
+        <description>
+Configurable naming conventions for field declarations. This rule reports variable declarations which do not match the regex that applies to their specific kind —e.g. constants (static final), static field, final field. Each regex can be configured through properties.
+By default this rule uses the standard Apex naming convention (Camel case).
+This rule is defined by the following Java class: net.sourceforge.pmd.lang.apex.rule.codestyle.FieldNamingConventionsRule
+        </description>
+        <priority>1</priority>
+        <example>
+<![CDATA[
+
+public class Foo {
+
+    Integer instanceField; // This is in camel case, so it's ok
+
+    Integer INSTANCE_FIELD; // This will be reported unless you change the regex
+}
+
+]]>
+        </example>
+    </rule>
+
+
 </ruleset>
