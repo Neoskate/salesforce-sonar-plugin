@@ -81,6 +81,7 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "DebugsShouldUseLoggingLevel");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FieldNamingConventions");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FormalParameterNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "LocalVariableNamingConventions");		
 		profile.done();
 	}
 
