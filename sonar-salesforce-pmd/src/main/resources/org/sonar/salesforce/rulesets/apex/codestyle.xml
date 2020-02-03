@@ -185,7 +185,7 @@ while (true) {  // preferred approach
 
     <rule name="FieldNamingConventions"
           since="6.15.0"
-          message="The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum."
+          message="Configurable naming conventions for field declarations."
           class="net.sourceforge.pmd.lang.apex.rule.bestpractices.FieldNamingConventions"
           externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_bestpractices.html#fieldnamingconventions">
         <description>
