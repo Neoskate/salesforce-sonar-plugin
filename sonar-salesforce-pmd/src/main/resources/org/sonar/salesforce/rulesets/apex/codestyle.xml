@@ -187,7 +187,7 @@ while (true) {  // preferred approach
           since="6.15.0"
           message="Configurable naming conventions for field declarations."
           class="net.sourceforge.pmd.lang.apex.rule.bestpractices.FieldNamingConventions"
-          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_bestpractices.html#fieldnamingconventions">
+          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_codestyle.html#fieldnamingconventions">
         <description>
 Configurable naming conventions for field declarations. This rule reports variable declarations which do not match the regex that applies to their specific kind —e.g. constants (static final), static field, final field. Each regex can be configured through properties.
 By default this rule uses the standard Apex naming convention (Camel case).
