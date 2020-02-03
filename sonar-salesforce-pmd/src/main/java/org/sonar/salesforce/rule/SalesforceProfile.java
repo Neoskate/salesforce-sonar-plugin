@@ -67,7 +67,6 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidDirectAccessTriggerMap");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidDmlStatementsInLoops");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "IfStmtsMustUseBraces");
-		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "VariableNamingConventions");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "MethodWithSameNameAsEnclosingClass");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ExcessivePublicCount");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "NcssTypeCount");
