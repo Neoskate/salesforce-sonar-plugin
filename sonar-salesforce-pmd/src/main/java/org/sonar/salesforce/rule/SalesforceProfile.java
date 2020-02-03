@@ -78,6 +78,7 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexDangerousMethods");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexAssertionsShouldIncludeMessage");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexUnitTestMethodShouldHaveIsTestAnnotation");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "DebugsShouldUseLoggingLevel");
 		profile.done();
 	}
 

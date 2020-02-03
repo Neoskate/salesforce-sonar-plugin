@@ -169,5 +169,36 @@ private class ATest {
         </example>
     </rule>
 
+    <rule name="DebugsShouldUseLoggingLevel"
+          since="6.18.0"
+          message="The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum."
+          class="net.sourceforge.pmd.lang.apex.rule.bestpractices.DebugsShouldUseLoggingLevel"
+          externalInfoUrl="${pmd.website.baseurl}/pmd_rules_apex_bestpractices.html#debugsshoulduselogginglevel">
+        <description>
+The first parameter of System.debug, when using the signature with two parameters, is a LoggingLevel enum.
+Having the Logging Level specified provides a cleaner log, and improves readability of it.
+This rule is defined by the following XPath expression:
+//MethodCallExpression[lower-case(@FullMethodName)='system.debug'][count(*)=2
+or ($strictMode=true() and count(*)=3 and lower-case(VariableExpression/@Image)='debug')]
+        </description>
+        <priority>3</priority>
+        <example>
+<![CDATA[
+
+@isTest
+public class Foo {
+    @isTest
+    static void bar() {
+        System.debug('Hey this code executed.'); // not good
+        System.debug(LoggingLevel.WARN, 'Hey, something might be wrong.'); // good
+        System.debug(LoggingLevel.DEBUG, 'Hey, something happened.'); // not good when on strict mode
+    }
+}
+
+]]>
+        </example>
+    </rule>
+
+
 
 </ruleset>
