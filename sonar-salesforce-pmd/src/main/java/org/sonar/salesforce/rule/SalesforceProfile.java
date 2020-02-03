@@ -78,10 +78,11 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexDangerousMethods");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexAssertionsShouldIncludeMessage");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexUnitTestMethodShouldHaveIsTestAnnotation");
-		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "DebugsShouldUseLoggingLevel");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FieldNamingConventions");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FormalParameterNamingConventions");
-		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "LocalVariableNamingConventions");		
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "LocalVariableNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "PropertyNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidNonExistentAnnotations");				
 		profile.done();
 	}
 
