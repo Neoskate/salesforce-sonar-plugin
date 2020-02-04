@@ -67,7 +67,6 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidDirectAccessTriggerMap");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidDmlStatementsInLoops");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "IfStmtsMustUseBraces");
-		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "VariableNamingConventions");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "MethodWithSameNameAsEnclosingClass");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ExcessivePublicCount");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "NcssTypeCount");
@@ -77,6 +76,13 @@ public class SalesforceProfile implements BuiltInQualityProfilesDefinition {
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidDeeplyNestedIfStmts");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "TooManyFields");
 		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexDangerousMethods");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexAssertionsShouldIncludeMessage");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "ApexUnitTestMethodShouldHaveIsTestAnnotation");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FieldNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "FormalParameterNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "LocalVariableNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "PropertyNamingConventions");
+		profile.activateRule(SalesforcePlugin.REPOSITORY_KEY, "AvoidNonExistentAnnotations");				
 		profile.done();
 	}
 
